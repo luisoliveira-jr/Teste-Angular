@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "id": "03",
+      "title": "ms",
+      "firstName": "Ann",
+      "lastName": "Mason",
+      "gender": "female",
+      "email": "https://cdn-icons-png.flaticon.com/512/18/18148.png",
+      "dateOfBirth": "1/1/1900",
+      "registerDate": "8/23/2023",
+      "phone": "11959806331",
+      "picture": "https://cdn-icons-png.flaticon.com/512/18/18148.png",
+      "location": {
+        "street": "string(length: 5-100)",
+        "city": "string(length: 2-30)",
+        "state": "string(length: 2-30)",
+        "country": "string(length: 2-30)",
+        "timezone": "string(Valid timezone value ex. +7:00, -1:00)"
+      }
+    },
+    {
+      "id": "04",
+      "title": "ms",
+      "firstName": "Ann",
+      "lastName": "Mason",
+      "gender": "female",
+      "email": "a.mason@email.com",
+      "dateOfBirth": "1/1/1900",
+      "registerDate": "8/23/2023",
+      "phone": "11959806331",
+      "picture": "https://cdn-icons-png.flaticon.com/512/18/18148.png",
+      "location": {
+        "street": "string(length: 5-100)",
+        "city": "string(length: 2-30)",
+        "state": "string(length: 2-30)",
+        "country": "string(length: 2-30)",
+        "timezone": "string(Valid timezone value ex. +7:00, -1:00)"
+      }
+    },
+    {
+      "id": "06",
+      "title": "ms",
+      "firstName": "Ann",
+      "lastName": "Mason",
+      "gender": "female",
+      "email": "a.mason@email.com",
+      "dateOfBirth": "1/1/1900",
+      "registerDate": "8/23/2023",
+      "phone": "11959806331",
+      "picture": "https://cdn-icons-png.flaticon.com/512/18/18148.png",
+      "location": {
+        "street": "string(length: 5-100)",
+        "city": "string(length: 2-30)",
+        "state": "string(length: 2-30)",
+        "country": "string(length: 2-30)",
+        "timezone": "string(Valid timezone value ex. +7:00, -1:00)"
+      }
+    },
+    {
+      "title": "Sra",
+      "firstName": "DESENVOLVEDOR",
+      "lastName": "Santos Junior",
+      "gender": "Masc",
+      "email": "olivier@mail.com",
+      "dateOfBirth": "18/08/91",
+      "phone": "(11) 9598-06331",
+      "picture": "https://cdn-icons-png.flaticon.com/512/18/18148.png",
+      "id": "shpMYfd"
+    },
+    {
+      "title": "sa",
+      "firstName": "bbb",
+      "lastName": "bbbb",
+      "gender": "bbb",
+      "email": "bbb",
+      "dateOfBirth": "bbb",
+      "phone": "(11) 9598-06331",
+      "picture": "https://cdn-icons-png.flaticon.com/512/18/18148.png",
+      "id": "EVxabg-"
+    }
+  ]
+}

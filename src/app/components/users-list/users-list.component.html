@@ -1,1 +1,20 @@
-<p>users-list works!</p>
+<div class="lista-container">
+    <h2 class="fw-bold" style="margin-top: 20px; margin-bottom: 20px;">
+        Exibição de lista de usuários
+    </h2>
+
+    <div class="user-container d-flex flex-wrap" style="margin: 20px;">
+        <div class="user" *ngFor="let user of allUsers$ | async">
+
+            <div class="card" style="width: 18rem;  margin: 20px;">
+                <img class="card-img-top" src="{{user.picture}}" alt="Card picture cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{user.firstName}}</h5>
+                    <a class="btn btn-danger" (click)="delete(user.id!)" style="float: right; margin-right: 5px;">Apagar</a>
+                    <a class="btn btn-warning" routerLink="/app-user-update/{{user.id}}" style="float: right; margin-right: 5px;">Editar</a>
+                    <a class="btn btn-success" routerLink="/app-user-view/{{user.id}}" style="float: right; margin-right: 5px;">Acessar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,9 +7,9 @@ import { UserNewComponent } from './components/user-new/user-new.component';
 
 const routes: Routes = [
   { path:'', component: UsersListComponent},
-  { path:'app-user-view', component: UserViewComponent},
+  { path:'app-user-view/:id', component: UserViewComponent},
   { path:'app-user-new', component: UserNewComponent},
-  { path:'app-user-update', component: UserUpdateComponent},
+  { path:'app-user-update/:id', component: UserUpdateComponent},
 ];
 
 @NgModule({
