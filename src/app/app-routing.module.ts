@@ -10,6 +10,7 @@ const routes: Routes = [
   { path:'app-user-view/:id', component: UserViewComponent},
   { path:'app-user-new', component: UserNewComponent},
   { path:'app-user-update/:id', component: UserUpdateComponent},
+  
 ];
 
 @NgModule({

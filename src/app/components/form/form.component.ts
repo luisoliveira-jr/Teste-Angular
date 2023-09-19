@@ -8,7 +8,6 @@ import { User } from 'src/app/interfaces/User';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-  @Input() btnText!: string;
   @Input() userData: User | null = null;
   @Output() onSubmit = new EventEmitter<User>()
 
@@ -21,25 +20,14 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.userForm = new FormGroup({
-      id: new FormControl(this.userData ? this.userData.id : ''),
-      title: new FormControl(this.userData ? this.userData.title : '', [Validators.required]),
       firstName: new FormControl(this.userData ? this.userData.firstName : '', [Validators.required]),
       lastName: new FormControl(this.userData ? this.userData.lastName : '', [Validators.required]),
       gender: new FormControl(this.userData ? this.userData.gender : '', [Validators.required]),
       dateOfBirth: new FormControl(this.userData ? this.userData.dateOfBirth : '', [Validators.required]),
-      registerDate: new FormControl(this.userData ? this.userData.registerDate : '', [Validators.required]),
+      email: new FormControl(this.userData ? this.userData.email : '', [Validators.required]),
       phone: new FormControl(this.userData ? this.userData.phone : '', [Validators.required]),
-      /* picture: new FormControl(this.userData ? this.userData.picture : '', [Validators.required]), */
-      /* location: new FormControl(this.userData ? this.userData.location : '', [Validators.required]), */
+      picture: new FormControl(this.userData ? this.userData.picture : '', [Validators.required]),
     })
-  }
-
-  get id() {
-    return this.userForm.get('id')!;
-  }
-
-  get title() {
-    return this.userForm.get('title')!;
   }
 
   get firstName() {
@@ -58,23 +46,18 @@ export class FormComponent implements OnInit {
     return this.userForm.get('dateOfBirth')!;
   }
 
-  get registerDate() {
-    return this.userForm.get('registerDate')!;
+  get email() {
+    return this.userForm.get('email')!;
   }
 
   get phone() {
     return this.userForm.get('phone')!;
   }
 
-  onFileSelected(event: any) {
-    const file: File = event.target.files[0];
-
-    this.userForm.patchValue({ image: file });
+  get picture() {
+    return this.userForm.get('picture')!;
   }
 
-  /* get location() {
-    return this.userForm.get('location')!;
-  } */
 
   submit() {
     if (this.userForm.invalid) {

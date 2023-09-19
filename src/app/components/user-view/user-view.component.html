@@ -4,45 +4,70 @@
   </h2>
 </div>
 
-<div class="row">
-  <div class="card" style="margin-bottom: 5px;">
-    <div class="text-center">
-      <img src="..." class="rounded" alt="...">
+<div class="container" *ngIf="user">
+  <div class="row">
+    <div class="col-sm text-center" style="margin: 20px;">
+      <img src="{{user.picture}}" class="rounded" alt="...">
     </div>
   </div>
-  <div class="card" style="margin-bottom: 5px;">
-    <div class="card-body">
-      Primeiro nome
+
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="margin-bottom: 5px;">
+        <div class="card-body">
+          Primeiro nome: <strong>{{user.firstName}}</strong>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="margin-bottom: 5px;">
+        <div class="card-body">
+          Sobrenome: <strong>{{user.lastName}}</strong>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="card" style="margin-bottom: 5px;">
-    <div class="card-body">
-      Sobrenome
+
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="margin-bottom: 5px;">
+        <div class="card-body">
+          Data de nascimento: <strong>{{user.dateOfBirth}}</strong>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="margin-bottom: 5px;">
+        <div class="card-body">
+          Gênero: <strong>{{user.gender}}</strong>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="card" style="margin-bottom: 5px;">
-    <div class="card-body">
-      Gênero
+
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="margin-bottom: 5px;">
+        <div class="card-body">
+          Email: <strong>{{user.email}}</strong>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="margin-bottom: 5px;">
+        <div class="card-body">
+          Telefone: <strong>{{user.phone}}</strong>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="card" style="margin-bottom: 5px;">
-    <div class="card-body">
-      Data de nascimento
+
+  <div class="row">
+    <div class="col-sm d-flex flex-row-reverse bd-highlight">
+      <a class="btn btn-primary" routerLink="/app-users-list">
+        Voltar</a>     
     </div>
   </div>
-  <div class="card" style="margin-bottom: 5px;">
-    <div class="card-body">
-      Data de registro
-    </div>
-  </div>
-  <div class="card" style="margin-bottom: 5px;">
-    <div class="card-body">
-      Endereço
-    </div>
-  </div>
-  <div class="card" style="margin-bottom: 5px;">
-    <div class="card-body">
-      Telefone
-    </div>
-  </div>
+
+  
 </div>

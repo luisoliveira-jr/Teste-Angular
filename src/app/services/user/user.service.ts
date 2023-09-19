@@ -10,32 +10,32 @@ import { environment } from 'src/environments/environment';
 })
 export class UserService {
   private baseApiUrl = environment.baseApiUrl;
-  private apiUrl = `${this.baseApiUrl}users/`;
-
+ 
   constructor(private http: HttpClient) { }
 
-
   getUsers() {
-    return this.http.get<User[]>(this.apiUrl);
+    const url = `${this.baseApiUrl}user?page=1&limit=10000000`;
+    return this.http.get<User[]>(url);
   }
 
   getUser(id: string) {
-    const url = `${this.apiUrl}/${id}`
+    const url = `${this.baseApiUrl}user/${id}`
     return this.http.get<User>(url);
   }
 
-  createUser(newUser: User) {
-    return this.http.post<User>(this.apiUrl, newUser);
+  createUser(user: any) {
+    const url = `${this.baseApiUrl}user/create`
+    return this.http.post<FormData>(url, user);
   }
 
-  updateUser(user: User) {
-    const url = `${this.apiUrl}/${user.id}`
-    return this.http.put<User>(url, user);
+  updateUser(id: string) {
+    const url = `${this.baseApiUrl}user/${id}`
+    return this.http.put<User>(url, id);
   }
 
   deleteUser(id: string) {
-    const url = `${this.apiUrl}/${id}`
-    return this.http.delete<void>(url);
+    const url = `${this.baseApiUrl}user/${id}`
+    return this.http.delete<User>(url);
   }
 
 

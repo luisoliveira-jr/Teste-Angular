@@ -4,15 +4,27 @@
     </h2>
 
     <div class="user-container d-flex flex-wrap" style="margin: 20px;">
-        <div class="user" *ngFor="let user of allUsers$ | async">
-
-            <div class="card" style="width: 18rem;  margin: 20px;">
-                <img class="card-img-top" src="{{user.picture}}" alt="Card picture cap">
+        <div class="user" *ngFor="let user of allUsers$">
+            <div class="card d-flex justify-content-around" style="margin: 20px; width: 200px;">
                 <div class="card-body">
-                    <h5 class="card-title">{{user.firstName}}</h5>
-                    <a class="btn btn-danger" (click)="delete(user.id!)" style="float: right; margin-right: 5px;">Apagar</a>
-                    <a class="btn btn-warning" routerLink="/app-user-update/{{user.id}}" style="float: right; margin-right: 5px;">Editar</a>
-                    <a class="btn btn-success" routerLink="/app-user-view/{{user.id}}" style="float: right; margin-right: 5px;">Acessar</a>
+                    <div class="media text-center">
+                        <img src="{{user.picture}}" alt="Imagem de perfil">
+                    </div>
+                    <div class="media-body" style="margin-top: 10px;">
+                        <h5 class="mt-0">{{user.firstName}}</h5>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <div class="row text-center">
+                        <div class="col-sm">
+                            <a class="btn btn-danger btn-sm" (click)="delete(user.id!)">
+                                <i class="fa fa-trash"></i></a>
+                            <a class="btn btn-warning btn-sm" routerLink="/app-user-update/{{user.id}}">
+                                <i class="fa fa-edit"></i></a>
+                            <a class="btn btn-primary btn-sm" routerLink="/app-user-view/{{user.id}}">
+                                <i class="fa fa-sign-in"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

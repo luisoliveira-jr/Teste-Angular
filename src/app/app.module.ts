@@ -14,8 +14,7 @@ import { UserUpdateComponent } from './components/user-update/user-update.compon
 import { UserViewComponent } from './components/user-view/user-view.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { MessagesComponent } from './components/messages/messages.component';
-
-/* import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; */
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -35,6 +34,7 @@ import { MessagesComponent } from './components/messages/messages.component';
     FormsModule, 
     ReactiveFormsModule,
     HttpClientModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

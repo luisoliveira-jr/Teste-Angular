@@ -1,5 +1,11 @@
 # Avaliação
 
+## Para rodar a aplicação
+- No terminal executar: npm install
+- Inserir token do Dummy API em: src -> app -> environments -> arquvivo: environment.development
+- No terminal executar: ng serve
+
+
 Versão do Angular: v15.2.6. Versão indicada do node: v14.20.1.
 
 ## Requisitos da aplicação
@@ -7,10 +13,10 @@ Versão do Angular: v15.2.6. Versão indicada do node: v14.20.1.
 Utilizando a API: https://dummyapi.io/data/v1/, seguindo a documentação: https://dummyapi.io/docs (Endpoints de usuários: https://dummyapi.io/docs/user ).
 
 ##### Criar as seguintes paginas:
-- Exibição de lista de usuários
-- Exibição de usuário único
-- Criação de usuários
-- Atualização de dados de usuário. 
+- Exibição de lista de usuários - concluido
+- Exibição de usuário único - concluido
+- Criação de usuários - parcial
+- Atualização de dados de usuário - parcial
 
 ###### Outras informações:
 Todas as paginas precisam estar integradas com a API. 

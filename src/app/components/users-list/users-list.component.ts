@@ -4,19 +4,24 @@ import { UserService } from 'src/app/services/user/user.service';
 import { User } from 'src/app/interfaces/User';
 import { Observable } from 'rxjs';
 
+
 @Component({
   selector: 'app-users-list',
   templateUrl: './users-list.component.html',
   styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent implements OnInit {
+  allUsers$: any;
 
-  allUsers$ = new Observable<User[]>()
+  /* allUsers$ = new Observable<User[]>() */
 
   constructor(private userService: UserService) { }
-  
+
   ngOnInit(): void {
-    this.allUsers$ = this.userService.getUsers()
+    this.userService.getUsers().subscribe((response: any) => {
+      this.allUsers$ = response.data;
+      console.log(this.allUsers$)
+    })
 
   }
 

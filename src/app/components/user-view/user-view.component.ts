@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/interfaces/User';
 import { UserService } from 'src/app/services/user/user.service';
 import { MessagesService } from 'src/app/services/messages/messages.service';
@@ -14,9 +14,19 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./user-view.component.scss']
 })
 export class UserViewComponent implements OnInit {
-  allUsers$ = new Observable<User[]>()
+  user?: User;
+  
+  constructor(private userService: UserService, private route: ActivatedRoute) { }
 
-  constructor(private userService: UserService) { }
+  ngOnInit(): void {
 
-  ngOnInit(): void {}
+    const id = this.route.snapshot.paramMap.get("id")
+
+    this.userService
+      .getUser(id!)
+      .subscribe((user) => (this.user = user));
+  }
+
+  
+  
 }
